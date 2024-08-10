@@ -74,6 +74,7 @@ const Hero = () => {
               />
             </div>
           </div>
+          <hr className="w-[80%] mx-auto border-t-[1px] border-neutral-800" />
         </div>
         <hr className="border-t-[1px] border-neutral-800 max-w-5xl mx-auto" />
       </div>
