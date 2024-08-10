@@ -40,6 +40,7 @@ const Hero = () => {
             apps on the cloud.
           </p>
         </div>
+        <hr className="w-[80%] mx-auto border-t-[1px] border-neutral-800 my-4" />
       </div>
       <div className="w-full bg-neutral-900 hidden md:block">
         <div className="w-full md:max-w-5xl md:mx-auto h-auto">
@@ -74,7 +75,6 @@ const Hero = () => {
               />
             </div>
           </div>
-          <hr className="w-[80%] mx-auto border-t-[1px] border-neutral-800" />
         </div>
         <hr className="border-t-[1px] border-neutral-800 max-w-5xl mx-auto" />
       </div>
