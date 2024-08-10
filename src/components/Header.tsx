@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <>
       <header className="md:hidden w-full fixed h-[5rem] bg-neutral-900">
-        <ul className="w-[80%] mx-auto h-full border-b-[1px] border-neutral-800 flex items-center justify-between">
+        <ul className="w-[80%] mx-auto h-full border-b-[1px] border-neutral-800 flex items-center justify-between text-neutral-300">
           <li>
             <FaHome className="text-2xl" />
           </li>

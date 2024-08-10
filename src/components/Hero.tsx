@@ -31,8 +31,8 @@ const Hero = () => {
           </div>
         </div>
         <div className="px-10 py-4">
-          <h2 className="text-2xl mb-4">Software Engineer</h2>
-          <p className={`${montserrat.className} font-light`}>
+          <h2 className="text-2xl mb-4 text-neutral-300">Software Engineer</h2>
+          <p className={`${montserrat.className} font-light text-neutral-300`}>
             Someone who loves to play with code to develop useful and fun
             applications. Currently working with full-stack web development
             using Nextjs,Typescript and tailwindcss. Aspiring to be a cloud
