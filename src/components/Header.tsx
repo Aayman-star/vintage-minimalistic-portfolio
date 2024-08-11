@@ -1,4 +1,4 @@
-import { montserrat } from "@/lib/fonts";
+import { montserrat, platypi } from "@/lib/fonts";
 import { FaHome } from "react-icons/fa";
 import { GrProjects } from "react-icons/gr";
 import { FaBlog } from "react-icons/fa";
@@ -22,7 +22,7 @@ const Header = () => {
       <div className="w-full bg-neutral-900 hidden md:block">
         <div className="w-full md:max-w-5xl md:mx-auto h-16 border-b-[1px] border-neutral-800 bg-neutral-900">
           <ul
-            className={`${montserrat.className} w-[90%] mx-auto h-full flex items-center justify-between  font-bold text-xl text-neutral-400`}>
+            className={`${platypi.className} w-[90%] mx-auto h-full flex items-center justify-between  font-bold text-[1.35rem] text-neutral-300`}>
             <li>About</li>
             <li>Projects</li>
             <li>Blog</li>
