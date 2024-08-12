@@ -19,16 +19,21 @@ const Header = () => {
           </li>
         </ul>
       </header>
-      <div className="w-full bg-neutral-900 hidden md:block">
-        <div className="w-full md:max-w-5xl md:mx-auto h-16 border-b-[1px] border-neutral-800 bg-neutral-900">
+      {/* Desktop Header */}
+      <header className="w-full fixed h-16 hidden md:block">
+        <div className="w-full md:max-w-4xl md:mx-auto md:h-full border-b-[1px] border-neutral-800 backdrop-blur">
           <ul
             className={`${platypi.className} w-[90%] mx-auto h-full flex items-center justify-between  font-bold text-[1.35rem] text-neutral-300`}>
-            <li>About</li>
-            <li>Projects</li>
+            <a href="/">
+              <li>About</li>
+            </a>
+            <a href="#Projects">
+              <li>Projects</li>
+            </a>
             <li>Blog</li>
           </ul>
         </div>
-      </div>
+      </header>
     </>
   );
 };

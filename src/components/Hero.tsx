@@ -8,14 +8,14 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { FaPenNib } from "react-icons/fa";
 const Hero = () => {
   return (
-    <>
+    <div id="About">
       <div className="w-full h-auto flex flex-col items-center bg-neutral-900 py-[7.5rem] md:hidden">
-        <div className="w-[330px] h-[500px] py-4 bg-white">
+        <div className="w-[310px] h-[500px] py-4 bg-white">
           <Image
             className="mx-auto shadow-md"
             src={hero}
-            width={300}
-            height={350}
+            width={280}
+            height={300}
             alt="hero-image"
           />
           <h1
@@ -45,8 +45,9 @@ const Hero = () => {
         </div>
         <hr className="w-[80%] mx-auto border-t-[1px] border-neutral-800 my-4" />
       </div>
+      {/* desktop view */}
       <div className="w-full bg-neutral-900 hidden md:block">
-        <div className="w-full md:max-w-5xl md:mx-auto h-auto">
+        <div className="w-full md:max-w-4xl md:mx-auto h-auto">
           <div className="w-full h-[90vh] flex items-center justify-between">
             <div className="w-2/3 flex flex-col gap-y-4 p-12 text-neutral-100">
               <h1
@@ -70,7 +71,7 @@ const Hero = () => {
             </div>
             <div className="w-1/3">
               <Image
-                className="border-8 mx-auto shadow-md"
+                className="border-[10px] mx-auto shadow-md"
                 src={hero}
                 width={250}
                 height={300}
@@ -79,9 +80,9 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <hr className="border-t-[1px] border-neutral-800 max-w-5xl mx-auto" />
+        <hr className="border-t-[1px] border-neutral-800 max-w-4xl mx-auto" />
       </div>
-    </>
+    </div>
   );
 };
 
