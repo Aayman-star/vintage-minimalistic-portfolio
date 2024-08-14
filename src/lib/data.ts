@@ -35,7 +35,7 @@ export const projects = [
   {
     id: 3,
     name: "Modern Portfolio",
-    description: "minimalisitc portfolio for the modern developer",
+    description: "Minimalisitc portfolio for the modern developer",
     link: "https://modern-portfolio-gilt.vercel.app/",
     img: modernImage,
     stack: ["Typescript", "React", "Tailwindcss", "Nextjs"],

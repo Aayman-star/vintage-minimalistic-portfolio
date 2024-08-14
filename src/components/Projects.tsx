@@ -8,10 +8,15 @@ import { projects } from "@/lib/data";
 const Projects = () => {
   return (
     <div id="Projects" className="w-full bg-neutral-900 ">
-      <div className="w-full h-auto md:max-w-4xl md:mx-auto md:h-[90vh] p-4 md:p-10 flex flex-col gap-y-10">
-        <h3 className={` ${platypi.className} text-3xl font-semibold `}>
+      <div className="w-full h-auto -mt-20 md:-mt-0 md:max-w-4xl md:mx-auto md:h-[90vh] p-4 md:p-10 flex flex-col gap-y-10">
+        <h3
+          className={` ${platypi.className} text-3xl font-semibold text-neutral-300 px-3`}>
           <span className="text-4xl font-bold">P</span>rojects
+          <span className={`block text-neutral-400 font-light text-base`}>
+            A list of my latest projects
+          </span>
         </h3>
+
         <div className={`w-full ${zillaSlab.className}`}>
           {projects.map((project, i) => (
             <div
