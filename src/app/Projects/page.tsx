@@ -8,7 +8,7 @@ const page = () => {
   return (
     <div className="w-full bg-neutral-900 text-neutral-300 pt-24 md:p-20">
       <div className="w-full h-screen md:max-w-4xl md:mx-auto md:min-h-screen px-4">
-        <p>This is the Projects Page</p>
+        {/* <p>This is the Projects Page</p> */}
         <div className={`w-full h-auto pt-10  ${zillaSlab.className}`}>
           {projects.map((project, i) => (
             <div
