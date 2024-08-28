@@ -10,11 +10,11 @@ const Hero = () => {
   return (
     <div id="About">
       <div className="w-full h-auto flex flex-col items-center bg-neutral-900 pt-[7.5rem] md:hidden">
-        <div className="w-[330px] h-[500px] py-4 bg-white shadow">
+        <div className="w-[350px] h-[500px] py-4 bg-white shadow">
           <Image
             className="mx-auto shadow-md"
             src={hero}
-            width={300}
+            width={320}
             height={300}
             alt="hero-image"
           />
