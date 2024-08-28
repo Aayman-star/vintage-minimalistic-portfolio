@@ -1,18 +1,20 @@
-import React from "react";
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
+import { projects } from "@/lib/data";
 import { FaLink } from "react-icons/fa";
 import { platypi, zillaSlab } from "@/lib/fonts";
-import { projects } from "@/lib/data";
+import { IoIosArrowRoundForward } from "react-icons/io";
 
 const Projects = () => {
   return (
-    <div id="Projects" className="w-full bg-neutral-900 ">
-      <div className="w-full h-auto -mt-20 md:-mt-0 md:max-w-4xl md:mx-auto md:h-[90vh] p-4 md:p-10 flex flex-col gap-y-10">
+    <div
+      id="Projects"
+      className="w-full bg-neutral-900  pt-[5rem] pb-4 md:pt-10">
+      <div className="w-full h-auto  md:max-w-4xl md:mx-auto md:h-[75vh] px-4 py-4 md:p-10 flex flex-col gap-y-10">
         <h3
           className={` ${platypi.className} text-3xl font-semibold text-neutral-300 px-3`}>
-          <span className="text-4xl font-bold">P</span>rojects
-          <span className={`block text-neutral-400 font-light text-base`}>
+          {/* <span className="text-4xl font-bold">P</span>rojects */}
+          <span className={`block text-neutral-300 font-light text-xl`}>
             A list of my latest projects
           </span>
         </h3>
@@ -50,8 +52,21 @@ const Projects = () => {
             </div>
           ))}
         </div>
+        <div className="w-full md:max-w-4xl md:mx-auto flex items-center justify-end">
+          <Link className="mr-4" href="/Projects">
+            <p
+              className={`text-neutral-100 ${zillaSlab.className} md:text-lg flex items-center`}>
+              More Projects
+              <span className="inline-block">
+                <IoIosArrowRoundForward className="text-2xl" />
+              </span>
+            </p>
+          </Link>
+        </div>
       </div>
-      <hr className="border-t-[1px] border-neutral-800 max-w-5xl mx-auto" />
+
+      <hr className="w-[80%] mx-auto border-t-[1px] border-neutral-800 mt-4 md:max-w-4xl" />
+      {/* <hr className="border-t-[1px] border-neutral-800 max-w-4xl mx-auto" /> */}
     </div>
   );
 };

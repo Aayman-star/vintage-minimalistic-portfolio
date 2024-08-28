@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import hero from "/public/hero-image.jpg";
-import { dancingScript, montserrat, zillaSlab } from "@/lib/fonts";
+import { dancingScript, zillaSlab } from "@/lib/fonts";
 import { FaGithub } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa";
@@ -9,25 +9,25 @@ import { FaPenNib } from "react-icons/fa";
 const Hero = () => {
   return (
     <div id="About">
-      <div className="w-full h-auto flex flex-col items-center bg-neutral-900 py-[7.5rem] md:hidden">
-        <div className="w-[310px] h-[500px] py-4 bg-white">
+      <div className="w-full h-auto flex flex-col items-center bg-neutral-900 pt-[7.5rem] md:hidden">
+        <div className="w-[330px] h-[500px] py-4 bg-white shadow">
           <Image
             className="mx-auto shadow-md"
             src={hero}
-            width={280}
+            width={300}
             height={300}
             alt="hero-image"
           />
           <h1
-            className={` text-neutral-700 text-3xl font-bold text-center py-2 mt-2 ${dancingScript.className}`}>
+            className={` text-neutral-800 text-3xl font-bold text-center py-2 mt-2 ${dancingScript.className}`}>
             Aayman Khalid
           </h1>
 
           <div className="flex items-center justify-around py-4  w-[70%] mx-auto border-t-[1px] border-neutral-900">
-            <FaGithub className="text-xl text-neutral-700" />
-            <FaXTwitter className="text-xl text-neutral-700" />
-            <FaLinkedinIn className="text-xl text-neutral-700" />
-            <FaPenNib className="text-xl text-neutral-700" />
+            <FaGithub className="text-xl text-neutral-800" />
+            <FaXTwitter className="text-xl text-neutral-800" />
+            <FaLinkedinIn className="text-xl text-neutral-800" />
+            <FaPenNib className="text-xl text-neutral-800" />
           </div>
         </div>
         <div className="px-6 py-4">
@@ -47,7 +47,7 @@ const Hero = () => {
       </div>
       {/* desktop view */}
       <div className="w-full bg-neutral-900 hidden md:block">
-        <div className="w-full md:max-w-4xl md:mx-auto h-auto">
+        <div className="w-full md:max-w-4xl md:mx-auto h-[95vh]">
           <div className="w-full h-[95vh] flex items-center justify-between">
             <div className="w-2/3 flex flex-col gap-y-4 p-12 text-neutral-100">
               <h1
