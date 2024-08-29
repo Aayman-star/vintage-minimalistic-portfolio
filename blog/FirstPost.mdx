@@ -1,29 +1,89 @@
 ---
-title: "This is the first Post"
-description: "How to integrate a static blog in nextjs app"
-date: "2024-08-22"
-slug: "first-post"
-publish: true
+title: "Introduction to MDX: A Basic Tutorial"
+description: "Learn the basic text structures and components in MDX, including headings, paragraphs, lists, code blocks, and more."
+date: "2024-08-27"
+slug: "mdx-basic-tutorial"
+publish: false
 ---
 
-# This is the heading
+MDX is a powerful format that allows you to write JSX (React components) in Markdown documents. It combines the simplicity of Markdown with the flexibility of React, making it a popular choice for building content-driven websites. In this tutorial, we’ll cover the basic text structures you can use in MDX.
 
-## This is a heading
+### Headings
 
-This is a list in markdown:
+Headings in MDX work just like in Markdown. Use `#` for the main heading and add more `#` symbols for subheadings.
 
-- One
-- Two
-- Three
+```mdx
+# This is an H1 heading
 
+## This is an H2 heading
+
+### This is an H3 heading
 ```
 
+This is a paragraph in MDX. You don't need any special syntax to create a paragraph, just write your text.
 
-export default function Home() {
-  return (
-    <div className="w-full h-auto bg-neutral-900">
-    <h1>Code goes here...</h1>
-    </div>
-  );
-}
+This is another paragraph, and it will be rendered separately from the first one.
+
+### Lists
+
+MDX supports both ordered and unordered lists.
+
+Unordered Lists
+Use \*, -, or + followed by a space to create an unordered list.
+
+- Item one
+- Item two
+- Item three
+
+### Ordered Lists
+
+For ordered lists, simply use numbers followed by a period.
+
+1. First item
+2. Second item
+3. Third item
+
+### Code Blocks
+
+To include code blocks in MDX, use triple backticks (```) or indent your code by four spaces. You can also specify the language for
+syntax highlighting.
+
+```javascript
+const greet = () => {
+  console.log("Hello, MDX!");
+};
 ```
+
+For inline code, use single backticks:
+
+```mdx
+This is inline code: `const x = 10;`
+```
+
+### Blockquotes
+
+Blockquotes are great for emphasizing certain parts of your text. Just use > before the line of text.
+
+> This is a blockquote. It’s used to highlight a quote or an important piece of information.
+
+### Links and Images
+
+Links in MDX are created using the [text](URL) syntax.
+
+### JSX in MDX
+
+One of the key features of MDX is the ability to include JSX (React components) directly in your content. This allows you to add
+interactive elements or custom styles.
+
+### Embedding YouTube Videos
+
+You can embed YouTube videos or any iframe content directly using JSX:
+
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+  frameborder="0"
+  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+/>
