@@ -50,7 +50,7 @@ const BlogPost = async ({ params }: { params: { slug: string } }) => {
         </span>
 
         <article
-          className={`${platypi.variable} ${zillaSlab.variable} prose prose-neutral prose-invert prose-p:text-neutral-300 prose-h1:text-lg prose-headings:font-platypi prose-p:font-light prose-p:font-zillaSlab md:prose-p:text-lg prose-li:font-zillaSlab prose-li:md:text-lg prose-pre:text-green-400`}>
+          className={`${platypi.variable} ${zillaSlab.variable} prose prose-neutral prose-invert prose-p:text-neutral-300  prose-headings:font-platypi prose-p:font-light prose-p:font-zillaSlab md:prose-p:text-lg prose-li:font-zillaSlab prose-li:md:text-lg prose-pre:text-green-400`}>
           <div dangerouslySetInnerHTML={{ __html: post.postContent }} />
         </article>
       </div>
