@@ -15,7 +15,7 @@ const Projects = () => {
           className={` ${platypi.className} text-3xl font-semibold text-neutral-300 px-3`}>
           {/* <span className="text-4xl font-bold">P</span>rojects */}
           <span className={`block text-neutral-300 font-light text-xl`}>
-            A list of my latest projects
+            A list of my latest works
           </span>
         </h3>
 
@@ -36,10 +36,10 @@ const Projects = () => {
                   className={`text-2xl font-semibold  text-neutral-300 flex items-center gap-x-2`}>
                   {project.name}
                   <Link href={project.link} target="_blank">
-                    <FaLink className="text-sm font-light text-neutral-300" />
+                    <FaLink className="text-sm font-light text-neutral-400" />
                   </Link>
                 </h2>
-                <p className={` md:text-lg font-light text-neutral-400 `}>
+                <p className={`  font-light text-neutral-400 `}>
                   {project.description}
                 </p>
               </div>
@@ -55,8 +55,8 @@ const Projects = () => {
         <div className="w-full md:max-w-4xl md:mx-auto flex items-center justify-end">
           <Link className="mr-4" href="/Projects">
             <p
-              className={`text-neutral-100 ${zillaSlab.className} md:text-lg flex items-center`}>
-              More Projects
+              className={`text-neutral-400 ${zillaSlab.className} md:text-lg flex items-center`}>
+              All Projects
               <span className="inline-block">
                 <IoIosArrowRoundForward className="text-2xl" />
               </span>

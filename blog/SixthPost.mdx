@@ -1,0 +1,46 @@
+---
+title: "How to remove a file from a github repo"
+description: "commonly used github commands"
+date: "2024-08-28"
+slug: "how-to-remove-a-file-from-a-github-repo"
+publish: true
+---
+
+This article outlines the sequence of gihub commands to follow.if you want to remove a file from the github repo.
+
+The untracked files are easy to delete from the local repository,but once pushed to the remote repository,files cannot be deleted from the
+local repo without causing errors in the synchrnocity of the two repos.So in such a situation one needs to remove the specific file from the
+remote repository first.The following command fetches the latest changes made to the remote repository to enusre that the local
+references are up to data. In simple words this command brings the local repo up to speed with the remote repo :
+
+```
+github fetch origin
+```
+
+Afterwards run the following command. this comand will fetch the names of all the files currently available on the mentioned branch.
+Replace the <branch-name> with the branch you are working on :
+
+```
+git ls-tree -r <branch-name> --name-only
+```
+
+Now you can remove a certain file from the local repo with the following command:
+
+```
+git rm <file-path>
+```
+
+If at this point you wish to keep the file in the local repository ,you can alternatively use the followig command :
+
+```
+git rm --cached <file-path>
+```
+
+Now you can commit and push the change to the remote repository and the file will be removed from the remote repository:
+
+```
+git commit -m "Remove <file-path> from the repository"
+git push origin main
+```
+
+At this point,if say,you want to delete the file or place it in the .gitignore files,you can do that.

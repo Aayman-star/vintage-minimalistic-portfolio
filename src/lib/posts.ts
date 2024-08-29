@@ -18,12 +18,20 @@ export const getAllPosts = () => {
     /**Use gray matter to parse the front-matter of the content */
     const { data, content } = matter(fileContent);
     const slug = data.slug ? data.slug : file.replace(/\.mdx$/, "");
-    const date = new Date(data.date).toLocaleDateString("en-US", {
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-      weekday: "long",
-    });
+    /**Function modified to place the recent date if there is no date */
+    const date = data.date
+      ? new Date(data.date).toLocaleDateString("en-US", {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+          weekday: "long",
+        })
+      : new Date().toLocaleDateString("en-US", {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+          weekday: "long",
+        });
 
     /**Return the data,content and slug in an object */
     return {
@@ -31,6 +39,7 @@ export const getAllPosts = () => {
       slug,
       title: data.title,
       description: data.description,
+      publish: data.publish,
       date: date,
       content,
     };
@@ -48,9 +57,23 @@ export async function getPostBySlug(slug: string) {
   const fileContents = fs.readFileSync(fullPath, "utf8");
   // console.log("FILE CONTENTS:", fileContents);
   const { data: metadata, content } = matter(fileContents);
+  /**Function modified to place the recent date if there is no date */
+  const date = metadata.date
+    ? new Date(metadata.date).toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        weekday: "long",
+      })
+    : new Date().toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        weekday: "long",
+      });
   const Content = await remark().use(html).process(content);
   // console.log("CONTENT:", Content);
   const postContent = Content.toString();
 
-  return { slug: slug, metadata, content, postContent };
+  return { slug: slug, metadata, date, content, postContent };
 }

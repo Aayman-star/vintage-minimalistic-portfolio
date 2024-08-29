@@ -41,3 +41,11 @@ export const projects = [
     stack: ["Typescript", "React", "Tailwindcss", "Nextjs"],
   },
 ];
+
+export const Data = {
+  Name: "Aayman Khalid",
+  Role: "Software Engineer",
+  About: ` I am a software engineer specialising in fullstack web
+                  applications,primarily with Typescript,
+                        using Reactjs and Nextjs.`,
+};

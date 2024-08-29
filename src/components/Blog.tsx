@@ -4,7 +4,7 @@ import { platypi, zillaSlab } from "@/lib/fonts";
 import { IoIosArrowRoundForward } from "react-icons/io";
 
 const Blog = () => {
-  const posts = getAllPosts();
+  const posts = getAllPosts().filter((post, i) => post.publish);
   const sortedPosts = posts
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
     .slice(0, 3);
@@ -26,7 +26,7 @@ const Blog = () => {
             <p className={`${platypi.className}  text-neutral-300 text-lg`}>
               <Link href={`/Blog/${post.slug}`}> {post.title}</Link>
             </p>
-            <span className={`${zillaSlab.className} text-neutral-300`}>
+            <span className={`${zillaSlab.className} text-neutral-400`}>
               {post.description}
             </span>
           </div>
@@ -39,8 +39,8 @@ const Blog = () => {
       <div className="w-full md:max-w-4xl md:mx-auto flex items-center justify-end pt-4 md:pt-10">
         <Link className="" href={"/Blog"}>
           <p
-            className={`${zillaSlab.className} text-neutral-300 flex items-center md:text-lg`}>
-            More Posts
+            className={`${zillaSlab.className} text-neutral-400 flex items-center md:text-lg`}>
+            All Posts
             <span className="inline-block">
               <IoIosArrowRoundForward className="text-2xl" />
             </span>
