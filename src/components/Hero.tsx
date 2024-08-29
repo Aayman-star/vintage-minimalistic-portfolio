@@ -13,7 +13,7 @@ const Hero = () => {
     <>
       <Header />
       <div id="About">
-        <div className="w-full h-auto flex flex-col items-center bg-neutral-900 lg:pt-[7.5rem] md:hidden">
+        <div className="w-full h-auto flex flex-col items-center bg-neutral-900 pt-[7.5rem] md:hidden">
           <div className="w-[350px] h-[550px] py-4 px-4 bg-white shadow">
             <Image
               className="mx-auto shadow-md"
