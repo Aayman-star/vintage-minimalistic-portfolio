@@ -11,8 +11,21 @@ export const metadata: Metadata = {
     default: "Vintage Minimalistic Portfolio",
     template: "%s",
   },
-  // title: "Aayman Khalid",
   description: "Software Developer",
+  openGraph: {
+    title: "Vintage-Minimalistic-Portfolio",
+    description: "Vintage-Minimalistic-Portfolio",
+    url: "https://vintage-minimalistic-portfolio.vercel.app/",
+    siteName: "Vintage-Minimalistic-Portfolio",
+    locale: "en_US",
+    type: "website",
+    images: "/opengraph-image.png",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Vintage-Minimalistic-Portfolio",
+    description: "Vintage-Minimalistic-Portfolio",
+  },
 };
 
 export default function RootLayout({
