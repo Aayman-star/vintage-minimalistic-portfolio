@@ -26,11 +26,11 @@ const BlogPost = async ({ params }: { params: { slug: string } }) => {
       className={`w-full h-auto md:min-h-screen bg-neutral-900 text-neutral-300 p-10`}>
       <div className="w-full h-full px-2 py-8 md:max-w-4xl md:mx-auto  md:px-20 flex flex-col gap-y-4">
         <div className="w-full md:max-w-4xl md:mx-auto flex items-center text-neutral-400">
-          <Link href={"/Blog"}>
+          <Link className="group" href={"/Blog"}>
             <p
               className={`${zillaSlab.className} flex items-center md:text-lg`}>
               <span className="inline-block">
-                <IoIosArrowRoundBack className="text-2xl" />
+                <IoIosArrowRoundBack className="text-2xl transition-transform duration-200 ease-in-out transform group-hover:-translate-x-1" />
               </span>
               Back
             </p>

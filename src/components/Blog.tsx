@@ -20,7 +20,7 @@ const Blog = () => {
 
       {sortedPosts?.map((post) => (
         <div
-          className="text-neutral-200 py-6 px-4 border-[1px] border-neutral-800 rounded-md mt-4 flex items-center justify-between"
+          className="text-neutral-200 py-6 px-4 border-[1px] border-neutral-800 rounded-md mt-4 flex items-center justify-between transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg"
           key={post.slug}>
           <div>
             <p className={`${platypi.className}  text-neutral-300 text-lg`}>
@@ -37,12 +37,12 @@ const Blog = () => {
         </div>
       ))}
       <div className="w-full md:max-w-4xl md:mx-auto flex items-center justify-end pt-4 md:pt-10">
-        <Link className="" href={"/Blog"}>
+        <Link className="group" href={"/Blog"}>
           <p
             className={`${zillaSlab.className} text-neutral-400 flex items-center md:text-lg`}>
             All Posts
             <span className="inline-block">
-              <IoIosArrowRoundForward className="text-2xl" />
+              <IoIosArrowRoundForward className="text-2xl transition-transform duration-200 ease-in-out transform group-hover:translate-x-1" />
             </span>
           </p>
         </Link>

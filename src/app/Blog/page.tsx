@@ -12,11 +12,11 @@ const page = () => {
     <>
       <div className="w-full h-auto md:min-h-screen px-10 py-8 bg-neutral-900">
         <div className="w-full md:max-w-4xl md:mx-auto flex items-center text-neutral-400">
-          <Link href="/">
+          <Link className="group" href="/">
             <p
               className={`${zillaSlab.className} flex items-center md:text-lg`}>
               <span className="inline-block">
-                <IoIosArrowRoundBack className="text-2xl" />
+                <IoIosArrowRoundBack className="text-2xl transition-transform duration-200 ease-in-out transform group-hover:-translate-x-1" />
               </span>
               Back
             </p>
@@ -25,7 +25,7 @@ const page = () => {
         <div className="w-full h-full md:max-w-4xl md:mx-auto py-5">
           {sortedPosts?.map((post) => (
             <div
-              className="text-neutral-200 py-6 px-4 border-[1px] border-neutral-800 rounded-md mt-4 flex items-center justify-between"
+              className="text-neutral-200 py-6 px-4 border-[1px] border-neutral-800 rounded-md mt-4 flex items-center justify-between transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg"
               key={post.slug}>
               <div>
                 <p className={`${platypi.className}  text-neutral-200 text-lg`}>
