@@ -7,7 +7,7 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 
 const Projects = () => {
   return (
-    <div
+    <section
       id="Projects"
       className="w-full bg-neutral-900  pt-[5rem] pb-4 md:pt-10">
       <div className="w-full h-auto  md:max-w-4xl md:mx-auto md:h-[75vh] px-4 py-4 md:p-10 flex flex-col gap-y-10">
@@ -23,7 +23,7 @@ const Projects = () => {
           {projects.map((project, i) => (
             <div
               key={i}
-              className={`w-full py-2 border-[1px] border-neutral-800 rounded-lg flex items-center gap-x-2 md:gap-x-4 mb-4 transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg`}>
+              className={`w-full py-2 border-[1px] border-neutral-800 rounded-lg flex items-center gap-x-2 md:gap-x-4 mb-4 transition-all duration-300 ease-in-out transform hover:border-neutral-700 hover: hover:shadow-lg`}>
               <Image
                 className="rounded-md mx-1 md:mx-4"
                 src={project.img}
@@ -67,8 +67,13 @@ const Projects = () => {
 
       <hr className="w-[80%] mx-auto border-t-[1px] border-neutral-800 mt-4 md:max-w-4xl" />
       {/* <hr className="border-t-[1px] border-neutral-800 max-w-4xl mx-auto" /> */}
-    </div>
+    </section>
   );
 };
 
 export default Projects;
+
+/**
+ * Removing the y-axis animation from the projects section for now
+ * -translate-y-1
+ */

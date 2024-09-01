@@ -12,7 +12,7 @@ const Hero = () => {
   return (
     <>
       <Header />
-      <div id="About">
+      <section id="About">
         <div className="w-full h-auto flex flex-col items-center bg-neutral-900 pt-[7.5rem] md:hidden">
           <div className="w-[350px] h-[550px] py-4 px-4 bg-white shadow">
             <Image
@@ -88,7 +88,7 @@ const Hero = () => {
           </div>
           <hr className="border-t-[1px] border-neutral-800 md:max-w-3xl lg:max-w-4xl mx-auto" />
         </div>
-      </div>
+      </section>
     </>
   );
 };

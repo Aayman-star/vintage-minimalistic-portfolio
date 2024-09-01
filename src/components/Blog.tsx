@@ -10,7 +10,7 @@ const Blog = () => {
     .slice(0, 3);
 
   return (
-    <div
+    <section
       id="Blog"
       className={`w-full h-auto px-4 pb-4 md:max-w-4xl md:h-[90vh] md:mx-auto pt-[5.25rem] md:p-10`}>
       <h2
@@ -20,7 +20,7 @@ const Blog = () => {
 
       {sortedPosts?.map((post) => (
         <div
-          className="text-neutral-200 py-6 px-4 border-[1px] border-neutral-800 rounded-md mt-4 flex items-center justify-between transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg"
+          className="text-neutral-200 py-6 px-4 border-[1px] border-neutral-800 rounded-md mt-4 flex items-center justify-between transition-all duration-300 ease-in-out transform hover:border-neutral-700  hover:shadow-lg"
           key={post.slug}>
           <div>
             <p className={`${platypi.className}  text-neutral-300 text-lg`}>
@@ -47,8 +47,11 @@ const Blog = () => {
           </p>
         </Link>
       </div>
-    </div>
+    </section>
   );
 };
 
 export default Blog;
+/**For now removing the y movement from the blog div
+ *  hover: -translate - y - 1;
+ */
