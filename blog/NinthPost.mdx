@@ -24,13 +24,14 @@ If you haven’t already created your React app, start by running:
 pnpm create vite
 ```
 
+Follow the prompts to set up your project. Choose react as the framework.
+
 ### 2. Install Dependencies
 
 Navigate to your project directory and install dependencies:
 
 ```
 pnpm install
-
 ```
 
 #### 3. Set Up vite.config.ts
@@ -121,8 +122,8 @@ Open .gitignore.
 If dist/ is present, remove or comment out the line:
 
 ```
-####### dist/
-
+.gitignore files use "#" to comment the lines
+#dist/
 ```
 
 ### Step 5: Build and Deploy Your App
@@ -132,7 +133,6 @@ If dist/ is present, remove or comment out the line:
 
 ```
 pnpm run predeploy
-
 ```
 
 This command compiles your app and outputs the files into the dist directory.
@@ -142,7 +142,6 @@ This command compiles your app and outputs the files into the dist directory.
 
 ```
 pnpm run deploy
-
 ```
 
 This command pushes the contents of the dist directory to the gh-pages branch on GitHub, which GitHub Pages uses to serve your site.
@@ -158,19 +157,18 @@ This command pushes the contents of the dist directory to the gh-pages branch on
 
 ```
 https://<username>.github.io/<repository-name>/
-
 ```
 
-Replace <username> and <repository-name> with your actual GitHub username and repository name.
+Replace **"<username>"** and **"<repository-name>"** with your actual GitHub username and repository name.
 
 Step 7: Troubleshooting Common Issues
 Blank Page After Deployment:
 
-Ensure the base option in vite.config.ts is correctly set to /<repository-name>/.
-Verify that the dist directory is correctly populated by the build process and not ignored in .gitignore.
-404 Errors for Assets:
+- Ensure the base option in vite.config.ts is correctly set to /<repository-name>/.
+  Verify that the dist directory is correctly populated by the build process and not ignored in .gitignore.
+  404 Errors for Assets:
 
-This usually indicates a path issue. Make sure the homepage and base configurations are correct.
-No dist Directory:
+- This usually indicates a path issue. Make sure the homepage and base configurations are correct.
+  No dist Directory:
 
-If the dist directory isn’t created, ensure that pnpm run build is working without errors and that the outDir is correctly set in vite.config.ts.
+- If the dist directory isn’t created, ensure that pnpm run build is working without errors and that the outDir is correctly set in vite.config.ts.
